@@ -1,0 +1,12 @@
+    .crystal-image {
+      width: 150px;
+      height: 150px;
+    }
+
+    p {
+        font-family: verdana;
+        font-size: 30px;
+    }
+    .score{
+        color:white;
+    }
