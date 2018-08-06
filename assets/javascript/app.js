@@ -2,8 +2,6 @@
 $(document).ready(function () {
     //Random crytsal number betweem 1 and 12 
 
-
-
     /** Returns a random number between min (inclusive) and max (exclusive)
     (max - min) + min;
 
@@ -31,11 +29,6 @@ $(document).ready(function () {
         counter += crytsal_1;
         $("#crystal-points").text(counter);
         reset();
-
-        // This is fine except the way our code is written every user will win first (when they hit 50).
-        // But will then lose immediately if they click again. Seems pointless right?
-        // To make this a game we need to create additional code to randomize the counter and targetScore.
-
     });
 
     $("#Crystal-2").on("click", function () {
@@ -43,11 +36,6 @@ $(document).ready(function () {
         counter += crytsal_2;
         $("#crystal-points").text(counter);
         reset();
-
-        // This is fine except the way our code is written every user will win first (when they hit 50).
-        // But will then lose immediately if they click again. Seems pointless right?
-        // To make this a game we need to create additional code to randomize the counter and targetScore.
-
     });
 
 
@@ -59,10 +47,7 @@ $(document).ready(function () {
         $("#crystal-points").text(counter);
 
         reset();
-        // This is fine except the way our code is written every user will win first (when they hit 50).
-        // But will then lose immediately if they click again. Seems pointless right?
-        // To make this a game we need to create additional code to randomize the counter and targetScore.
-
+ 
     });
 
 
@@ -70,9 +55,7 @@ $(document).ready(function () {
         counter += crytsal_4;
         $("#crystal-points").text(counter);
         reset();
-        // This is fine except the way our code is written every user will win first (when they hit 50).
-        // But will then lose immediately if they click again. Seems pointless right?
-        // To make this a game we need to create additional code to randomize the counter and targetScore.
+      
     });
 
     function reset() {
@@ -83,8 +66,6 @@ $(document).ready(function () {
             $("#crystal-points").text(counter);
             $("#wins").text("Wins: " + wins);
             $("#number-to-guess").text(targetNumber);
-
-
         }
 
         // Here we added an "else if" condition. If the user's counter ever exceeds the targetNumber...
@@ -97,8 +78,6 @@ $(document).ready(function () {
             $("#crystal-points").text(counter);
             $("#losts").text("Losses: " + losts);
             $("#number-to-guess").text(targetNumber);
-
-
         }
     }
 
@@ -108,8 +87,5 @@ $(document).ready(function () {
         crytsal_2 = Math.floor((Math.random() * crytsal_max - crytsal_min + 1) + crytsal_min);
         crytsal_3 = Math.floor((Math.random() * crytsal_max - crytsal_min + 1) + crytsal_min);
         crytsal_4 = Math.floor((Math.random() * crytsal_max - crytsal_min + 1) + crytsal_min);
-
     }
-
-
 });
