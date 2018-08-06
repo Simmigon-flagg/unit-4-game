@@ -12,6 +12,7 @@ $(document).ready(function () {
     var targetNumber_min = 19;
     var crytsal_max = 12;
     var crytsal_min = 1;
+
     //Random guess number betweem 19 and 120
     var targetNumber = Math.floor((Math.random() * (targetNumber_max - targetNumber_min) + 1) + targetNumber_min);
     var crytsal_1 = Math.floor((Math.random() * (crytsal_max - crytsal_min) + 1) + crytsal_min);
@@ -24,7 +25,6 @@ $(document).ready(function () {
 
     $("#number-to-guess").text(targetNumber);
     $("#crystal-points").text(counter);
-
     $("#Crystal-1").on("click", function () {
         counter += crytsal_1;
         $("#crystal-points").text(counter);
@@ -32,30 +32,22 @@ $(document).ready(function () {
     });
 
     $("#Crystal-2").on("click", function () {
-
         counter += crytsal_2;
         $("#crystal-points").text(counter);
         reset();
     });
 
-
     $("#Crystal-3").on("click", function () {
-
         counter += crytsal_3;
-
-
         $("#crystal-points").text(counter);
-
         reset();
- 
-    });
 
+    });
 
     $("#Crystal-4").on("click", function () {
         counter += crytsal_4;
         $("#crystal-points").text(counter);
         reset();
-      
     });
 
     function reset() {
